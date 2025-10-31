@@ -311,27 +311,6 @@ def train(train_loader, val_loader, model, optimizer, scheduler, max_epochs, dir
             print("✅ Best model saved based on Dice score.")
         
                 
-        
-       
-
-        # Update learning rate
-        
-
-        
-
-        # # Save the best model
-        # if val_loss < best_val_loss:
-        #     best_val_loss = val_loss
-        #     torch.save({
-        #         'epoch': epoch,
-        #         # "state_dict": model.state_dict(),
-        #         "state_dict":model.module.state_dict() if isinstance(model, torch.nn.DataParallel) else model.state_dict(),
-        #         "optimizer": optimizer.state_dict(),
-        #         "scheduler": scheduler.state_dict(),
-        #         "val_loss": val_loss,
-        #         "best_val_loss": best_val_loss
-        #     }, checkpoint_path)
-        #     print("Best model saved.")
 
         # Save the last model
         torch.save({
@@ -349,45 +328,4 @@ def train(train_loader, val_loader, model, optimizer, scheduler, max_epochs, dir
     print("Training complete.")
 
 
-# torch.save({
-#     'state_dict': model.module.state_dict() if isinstance(model, torch.nn.DataParallel) else model.state_dict()
-# }, save_path)
 
-
-
-# def load_last_model(model, optimizer, scheduler, directory_name, reset_lr=None):
-#     """
-#     Load the last saved model checkpoint to resume training if available.
-
-#     Args:
-#         model (torch.nn.Module): Model to load weights into.
-#         optimizer (torch.optim.Optimizer): Optimizer to load state.
-#         scheduler (torch.optim.lr_scheduler._LRScheduler): Scheduler to load state.
-#         directory_name (str): Directory where model checkpoints are stored.
-#         reset_lr (float, optional): Optionally reset learning rate to a specified value.
-
-#     Returns:
-#         tuple: Updated model, optimizer, scheduler, start_epoch, last_val_loss, and best_val_loss.
-#     """
-#     # Load the last model weights
-#     last_model_path = os.path.join(directory_name, "last_model_enlarged_FL.pt")
-#     if os.path.exists(last_model_path):
-#         checkpoint = torch.load(last_model_path)
-#         model.load_state_dict(checkpoint['state_dict'])
-#         optimizer.load_state_dict(checkpoint['optimizer'])
-#         scheduler.load_state_dict(checkpoint['scheduler'])
-#         start_epoch = checkpoint['epoch'] + 1
-#         last_val_loss = checkpoint['val_loss']
-#         best_val_loss = checkpoint.get('best_val_loss', float('inf'))  # Get the best val loss from checkpoint if available
-#         print(f"Last model loaded. Resuming training from epoch {start_epoch}")
-        
-#         # Optionally reset the learning rate if a new learning rate is provided
-#         if reset_lr is not None:
-#             for param_group in optimizer.param_groups:
-#                 param_group['lr'] = reset_lr
-#             print(f"Learning Rate after resetting: {optimizer.param_groups[0]['lr']}")
-        
-#         return model, optimizer, scheduler, start_epoch, last_val_loss, best_val_loss
-#     else:
-#         print("Last model weights not found. Starting training from scratch.")
-#         return model, optimizer, scheduler, 1, float('inf'), float('inf')
