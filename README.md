@@ -7,8 +7,6 @@ on the segmentation of three key subregions: whole tumor (WT), tumor core (TC), 
 validation set, demonstrating strong performance and robustness under varying clinical conditions. 
 
 
-Currently, it contains the final docker submission version to the challenge. 
-
 If you find our project useful for your research, please consider citing our paper and codebase with the following: 
 
 Aktar M, Nasser T, Souza R, A Multitask Learning Approach for Segmenting Brain Tumor Subregions: Towards Better Generalization, In BraTS Lighthouse 2025 Challenge: BraTS Generalizability Across Tumors (BraTS-GoAT), MICCAI 2025 (Accepted).
