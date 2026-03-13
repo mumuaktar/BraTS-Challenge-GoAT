@@ -6,6 +6,8 @@ performs self-supervised reconstruction and supervised segmentation, enabling ro
 on the segmentation of three key subregions: whole tumor (WT), tumor core (TC), and enhancing tumor (ET). Our method achieves an average Dice score of 0.72 (0.73,0.76,0.68 for WT, TC and ET respectively) in the
 validation set, demonstrating strong performance and robustness under varying clinical conditions. 
 
+We provide our pre-trained weights for direct inference and evaluation. 
+Download the weights from checkpoint: https://uofc-my.sharepoint.com/:u:/r/personal/mumu_aktar_ucalgary_ca/Documents/docker_submission/checkpoints/best_model_multitask_FL2.pth?csf=1&web=1&e=lL5Bk7
 
 If you find our project useful for your research, please consider citing our paper and codebase with the following: 
 
