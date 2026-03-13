@@ -7,7 +7,7 @@ on the segmentation of three key subregions: whole tumor (WT), tumor core (TC), 
 validation set, demonstrating strong performance and robustness under varying clinical conditions. 
 
 We provide our pre-trained weights for direct inference and evaluation. 
-Download the weights from checkpoint: https://uofc-my.sharepoint.com/:u:/r/personal/mumu_aktar_ucalgary_ca/Documents/docker_submission/checkpoints/best_model_multitask_FL2.pth?csf=1&web=1&e=lL5Bk7
+Download the weights from checkpoint: https://drive.google.com/file/d/1Drc8_noZ5UvrVrow-6vZCccL6ykkam8K/view?usp=drive_link
 
 If you find our project useful for your research, please consider citing our paper and codebase with the following: 
 
